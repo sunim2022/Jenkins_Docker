@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo suite - Google search">
+	
+	<test name="Functional tests in ${browser_param}">
+	   
+		<parameter name="browser" value="${browser_param}" />
+		<classes>
+		    <class name="testsuite.SearchPageTest" />			
+		</classes>
+	</test> 
+	
+</suite> <!-- Suite -->
