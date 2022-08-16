@@ -15,7 +15,8 @@ RUN apt-get update
 RUN apt-get install -y google-chrome-stable 
 
 # Install ChromeDriver.
-RUN wget -N https://chromedriver.storage.googleapis.com/105.0.5195.19/chromedriver_linux64.zip -P ~/
+ARG CHROME_DRIVER_VERSION=105.0.5195.19
+RUN wget -N https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip -P ~/
 RUN unzip ~/chromedriver_linux64.zip -d ~/
 RUN rm ~/chromedriver_linux64.zip
 RUN mv -f ~/chromedriver /usr/local/bin/chromedriver
